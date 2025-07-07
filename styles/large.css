@@ -1,0 +1,170 @@
+body{
+  font-family: "Noto Sans", sans-serif;
+  font-size: 16px;
+
+}
+
+@media (min-width:800px){
+    
+.site-logo{
+    display: flex;
+    gap: 10px;
+}
+.site-logo img{
+    width: 50px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.developer-name{
+    margin-top: 20px;
+}
+#menu {
+    display: none;
+  }
+  .navigation {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+  }
+  .navigation a {
+    display: block;
+  }
+
+    .part-one{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+
+}
+h1{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+}
+.introduction{
+    background-color: #6f6b6a;
+
+}
+.introduction h2{
+    text-align: center;
+    color: white;
+    background-color:  #6e805d;
+    font-size: 16px;
+    font-weight: normal;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.introduction p{
+    margin-top: 20px;
+    color: white;
+}
+.student-photo{
+    background: #6f6b6a;
+
+}
+
+.student-photo h2{
+     text-align: center;
+    color: white;
+    background-color:  #6e805d;
+    font-size: 16px;
+    font-weight: normal;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    
+}
+.student-photo img{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 150px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+  
+}
+.courses h2{
+    text-align: center;
+    color: white;
+    background-color:  #6e805d;
+    font-size: 16px;
+    font-weight: normal;
+    margin-top: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    
+}
+.courses-one{
+    margin-top: 20px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.courses-one button{
+    background-color:  #79737b;
+    font-size: 16px;
+    font-weight: normal;
+    border-style: none;
+    color: white;
+    padding: 10px;
+}
+.courses-two{
+    margin-top: 20px;
+     display: grid;
+     gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.courses-two button{
+    background-color:  #79737b;
+    font-size: 16px;
+    font-weight: normal;
+    border-style: none;
+    color: white;
+    padding: 10px;
+}
+.social-links{
+    display:flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.social-links img{
+     width: 60px;
+    height: auto;
+
+}
+.footer-details{
+    background-color: #6e805d;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+}
+#lastModified{
+    background-color: #6e805d;
+    padding-bottom: 30px;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+
+}
+.course-card {
+  background-color: #f0f0f0;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #333;
+  border-radius: 8px;
+}
+.course-card.completed {
+  background-color: #6e805d;
+  color: white;
+  font-weight: bold;
+}
+.total-credits {
+  margin: 1rem;
+  font-weight: bold;
+}
+
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A homepage showcasing skills acquired in HTML, CSS and JavaScript.">
+    <meta name="author" content="Lawson Mutsa">
+    <title>Lawson Mutsa - Home Page</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="scripts/course.js" defer></script>
+    <script src="scripts/dates.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+  <div class="site-logo">
+    <img src="images/logo.svg" alt="Logo image">
+    <span class="developer-name">Lawson Mutsa</span>
+  </div>
+  <button type="button" id="menu" aria-label="Menu"></button>
+  <nav>
+    <ul class="navigation">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">Chamber Project</a></li>
+      <li><a href="#">Final Project</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+    <main>
+        <h1>Home</h1>
+        <div class="part-one">
+             <section class="introduction">
+                <h2>About Me</h2>
+                <p>Lawson Mutsa, junior software developer from Zimbabwe 
+                    currently pursuing a Bachelor of Applied Science in Software Development 
+                    at Brigham Young University.
+                    Passionate about the IT World, particularly on how software applications 
+                    can be used in day to day lives to make our lives more easier.</p>
+             </section>
+
+            <section class="student-photo">
+                <h2>Student Photo</h2>
+                <img src="images/lawson.jpg" alt="Lawson's image">
+            </section>
+        </div>
+       
+       <section class="courses">
+            <h2>Web Certificate Courses</h2>
+                <div class="courses-one">
+                    <button type="button" style="margin-left: 7px; margin-right: 7px;">ALL</button>
+                    <button type="button">CSE</button>
+                    <button type="button" style="margin-left: 7px; margin-right: 7px;">WDD</button>
+                </div>
+            
+                <div class="courses-two">
+                    <button type="button" style="margin-left: 7px; margin-right: 7px;">WDD130</button>
+                    <button type="button">WDD131</button>
+                    <button type="button" style="margin-left: 7px; margin-right: 7px;">WDD231</button>
+                </div>            
+            
+                <div class="course-list"></div>
+                    <p class="total-credits"></p>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/Lawson-Mutsa/wdd231" target="_blank"><img src="images/github.svg" alt="Github Logo"></a>
+            <a href="https://linkedin.com/in/lawson-mutsa" target="_blank"><img src="images/linkedin.svg" alt="linkedin logo"></a>
+        </div>
+       
+        <p class="footer-details">
+        &copy; <span id="currentyear"></span> Lawson Mutsa, Zimbabwe
+        </p>
+
+        <p id="lastModified"></p>
+    </footer>
+    
+</body>
+</html>
