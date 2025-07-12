@@ -1,0 +1,59 @@
+[
+    {
+    "name":"Midlands Private Hospital",
+    "address":"Gymkhana Grounds 8766 J. Tongogara Ave",
+    "phone_number":"054-2227218",
+    "website-url":"https://www.themph.co.zw/",
+    "image_icon":"mph.png",
+    "membership_level":"Silver"
+},
+{
+    "name":"Bethel Clinic",
+    "address":"73 6th Street",
+    "phone_number":"+263 (54) 223 1628/709",
+    "website-url":"https://bethelclinic.co.zw/",
+    "image_icon":"bethel.jpg",
+    "membership_level":"Gold"
+},
+{
+    "name":"Gweru Specialist Children's Hospital",
+    "address":"74-9th Street Gweru",
+    "phone_number":"0542229650",
+    "website-url":"http://gsch.co.zw/",
+    "image_icon":"gsch.jpg",
+    "membership_level":""
+},
+{
+    "name":"Bata Shoe Company",
+    "address":"Stand Number 521 - 522, Bulawayo Road",
+    "phone_number":"242758250",
+    "website-url":"https://www.bata.com/zw/",
+    "image_icon":"bata.webp",
+    "membership_level":"Silver"
+},
+{
+    "name":"CritiCare Ambulance Services",
+    "address":"Gymkhana Grounds 9186 J. Tongogara Ave",
+    "phone_number":"+263788946660",
+    "website-url":"https://criticareambulance24.co.zw/",
+    "image_icon":"criticare.jpg",
+    "membership_level":"Gold"
+},
+{
+    "name":"Series Technology",
+    "address":"GRW7+2FQ",
+    "phone_number":"0542022120471",
+    "website-url":"http://www.seriestechnologies.com/",
+    "image_icon":"series.jpg",
+    "membership_level":"Silver"
+},
+{
+    "name":"Sheasham Investments",
+    "address":"75 7th Street",
+    "phone_number":"+263 717 267 049",
+    "website-url":"https://sheashaminvestments.co.zw/",
+    "image_icon":"sheasham.png",
+    "membership_level":"Gold"
+}
+]
+
