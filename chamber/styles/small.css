@@ -1,6 +1,5 @@
 body{
   font-family: "TikTok Sans", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
   margin-left: 5px;
@@ -59,7 +58,7 @@ body{
 }
 .site-logo{
     display: grid;
-    grid-template-columns: 1fr 6fr;
+    grid-template-columns: 1fr 5fr;
     margin-top: 25px;
 }
 .site-logo img{
@@ -86,9 +85,12 @@ body{
   transform: translate(-50%, -50%);
   color: white;
   text-align: center;
+  font-size: 18px;
+  font-weight: bold;
 }
-h2{
+h1{
     margin-top: 20px;
+    font-size: 20pxs;
 }
 .main{
     margin-top: 30px;
@@ -168,7 +170,7 @@ h2{
 .directory {
     display: grid;
     gap: 20px;
-    
+
 }
 
 .directory.grid-view {
