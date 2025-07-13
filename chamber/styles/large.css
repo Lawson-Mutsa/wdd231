@@ -8,11 +8,26 @@ body{
   
 }
 @media (min-width:800px){
-    .header{
+
+  #menu {
+    display: none;
+  }
+
+  .navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .navigation a {
+    display: block;
+  }
+  
+  .header{
     display: grid;
     grid-template-columns: 1fr 1fr;
     background-color:#ff7839;
-    padding: 15px;
+    padding: 10px;
     color: #333;
     font-size: 20px;
     
@@ -21,7 +36,7 @@ body{
 .site-logo{
     display: grid;
     grid-template-columns: 1fr 6fr;
-    margin-top: 17px;
+    margin-top: 25px;
 }
 .site-logo img{
     margin-left: 5px;
@@ -211,4 +226,5 @@ h2{
     justify-content: center;
 
 }
+
 }

@@ -1,0 +1,251 @@
+body{
+  font-family: "TikTok Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  margin-left: 5px;
+  margin-right: 5px;
+  
+}
+@media (min-width:300px){
+
+    /* Hamburger Button */
+#menu {
+  font-size: 2rem;
+  border: 0;
+  background: none;
+  color: #000;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+#menu::before {
+  content: "☰";
+}
+
+#menu.open::before {
+  content: "❌";
+}
+
+/* Navigation default (mobile hidden) */
+.navigation {
+  list-style: none;
+  background-color: #ff7839;
+  margin-top: 1rem;
+  padding: 0;
+  flex-direction: column;
+}
+
+.navigation a {
+  display: none;
+  padding: 1rem;
+  text-align: center;
+  text-decoration: none;
+  color: #333;
+}
+
+.navigation a:hover {
+  background-color: #bbb;
+  color: #333;
+  font-weight: 700;
+}
+
+/* When navigation is open */
+.navigation.open a {
+  display: block;
+}
+.site-logo{
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    margin-top: 25px;
+}
+.site-logo img{
+    margin-left: 5px;
+    width: 70px;
+    height: auto;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-img {
+  width: 100%;
+  height: 600px;
+  display: block;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+h2{
+    margin-top: 20px;
+}
+.main{
+    margin-top: 30px;
+    gap: 30px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+}
+.events{
+    color: white;
+    background-color: #ffab7b;  
+    
+    
+
+}
+.events h3{
+     background-color: #ff7839;
+     color: #333;
+     padding: 10px;
+    
+}
+.weather{ 
+    background-color: #ffab7b;  
+ 
+
+}
+.weather h3{
+     background-color: #ff7839;
+     color: #333;
+     padding: 10px;
+      
+
+}
+
+.weather img{
+    margin-top: 15px;
+    width: 50px;
+    height: auto;
+    border-radius: 50%;
+    margin-left: 10px;
+   
+}
+.weather-grid{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    
+
+}
+.weather-grid ul{
+    list-style: none;
+}
+.forecast{
+    background-color: #ffab7b;  
+   
+
+}
+.forecast p{
+    margin-left: 10px;
+}
+.forecast h3{
+    background-color: #ff7839;
+     color: #333;
+     padding: 10px;
+      margin-bottom: 15px;
+}
+
+
+.directory-controls {
+    margin: 20px 0;
+    text-align: center;
+}
+.directory-controls button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.directory {
+    display: grid;
+    gap: 20px;
+    
+}
+
+.directory.grid-view {
+    grid-template-columns: 1fr;
+}
+
+.directory.list-view {
+    grid-template-columns: 1fr;
+}
+.member-card {
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 20px;
+  background-color: #ffab7b;
+  margin: 15px 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.member-card h3 {
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+  color: #333;
+}
+
+.card-body {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.member-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+  background-color: #f1f1f1;
+}
+
+.member-info {
+  flex: 1;
+}
+
+.member-info p {
+  margin: 6px 0;
+  font-size: 0.95rem;
+}
+
+.member-info a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+.member-info a:hover {
+  text-decoration: underline;
+}
+.footer{
+    background-color: #ff7839;
+    color: #333;
+    font-weight: 500;
+    margin-top: 50px;
+    padding: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+}
+
+.footer-two{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+}
+.footer-two img{
+    width: 50px;
+    height: auto;
+    justify-content: center;
+
+}
+
+}
