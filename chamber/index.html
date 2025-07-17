@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gweru Chamber of Commerce | Home </title>
-    <meta name="description" content="Gweru Chamber of Commerce where businesses and patrioits get relevant information on events and businesses in Gweru.">
+    <title>Gweru Chamber of Commerce | Home</title>
+    <meta name="description" content="Gweru Chamber of Commerce where businesses and patriots get relevant information on events and businesses in Gweru.">
     <meta name="author" content="Lawson Mutsa">
     <meta property="og:title" content="Chamber of Commerce">
-    <meta property="og:description" content="Gweru Chamber of Commerce where businesses and patrioits get relevant information on events and businesses in Gweru.">
+    <meta property="og:description" content="Gweru Chamber of Commerce where businesses and patriots get relevant information on events and businesses in Gweru.">
     <meta property="og:url" content="https://lawson-mutsa.github.io/wdd231/chamber/directory.html">
     <meta property="og:image" content="town_council.svg">
     <link rel="icon" href="images/city_centre.webp">
@@ -16,94 +16,86 @@
     <link rel="stylesheet" href="styles/large.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap" rel="stylesheet">
-    <script src="scripts/main.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
     <script src="scripts/weather.js" defer></script>
     <script src="scripts/spotlight.js" defer></script>
     <script src="scripts/menu.js" defer></script>
 </head>
 <body>
-
-    <header>
-        <div class="header">
-            <div class="site-logo">
-                <img src="images/town2.jpg" alt="Gweru City Town Building">
-                <span>Gweru Chamber of Commerce</span>
-            </div>
-            <button type="button" id="menu" aria-label="Menu"></button>
-            <nav>
-                <ul class="navigation">
-                    <li><a href="#" class="active" rel="noopener noreferrer">HOME</a></li>
-                    <li><a href="directory.html" rel="noopener noreferrer">DIRECTORY</a></li>
-                    <li><a href="#" rel="noopener noreferrer">JOIN</a></li>
-                    <li><a href="#" rel="noopener noreferrer">DISCOVER</a></li>
-                </ul>
-            </nav>
+<header>
+    <div class="header">
+        <div class="site-logo">
+            <img src="images/town2.jpg" alt="Gweru City Town Building">
+            <span>Gweru Chamber of Commerce</span>
         </div>
-    </header>
-    
-    <main>
-        <section class="hero">
-            <img src="images/town2.jpg" alt="Antelope Park" class="hero-img">
-            <div class="hero-text">
-                <span>The place where people come to get know businesses in Gweru.</span>
+        <button id="menu" aria-label="Menu"></button>
+        <nav>
+            <ul class="navigation">
+                <li><a href="#" class="active">HOME</a></li>
+                <li><a href="directory.html">DIRECTORY</a></li>
+                <li><a href="#">JOIN</a></li>
+                <li><a href="#">DISCOVER</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <img src="images/town2.jpg" alt="Antelope Park" class="hero-img">
+        <div class="hero-text">
+            <span>The place where people come to know businesses in Gweru.</span>
+        </div>
+        <a href="#">Add Your Business</a>
+    </section>
+
+    <h1>Home</h1>
+
+    <div class="events">
+        <h3>Events</h3>
+        <p>No events scheduled</p>
+    </div>
+
+    <div class="weather">
+        <div class="current">
+            <h3 id="location">Current Weather</h3>
+            <div class="weather-grid">
+                <img id="icon" alt="Weather Icon">
+                <p class="temp" id="temp"></p>
+                <p class="desc" id="description"></p>
+                <p>Humidity: <span id="humidity"></span>%</p>
             </div>
-            <a href="#">Add Your Business</a>
-        </section>
+        </div>
+        <div class="forecast">
+            <h3>Weather Forecast</h3>
+            <div id="forecast-container" class="forecast-grid"></div>
+        </div>
+    </div>
 
-        <h1>Home</h1>
+    <div class="spotlights"></div>
+</main>
 
-            <div class="events">
-                <h3>Events</h3>
-                <p>No events scheduled</p>
-            </div>
-
-            <div class="weather">
-                <div class="current">
-                    <h3 id="location">Current Weather</h3>
-                    <div class="weather-grid">
-                        <img id="icon" alt="Weather Icon">
-                        <p class="temp" id="temp"></p>
-                        <p class="desc" id="description"></p>
-                        <p>Humidity: <span id="humidity"></span>%</p>
-                    </div>
-                </div>
-                 <div class="forecast">
-                    <h3>Weather Forecast</h3>
-                    <div id="forecast-container" class="forecast-grid"></div>
-                </div>
-            </div>
-
-            <div class="spotlights"></div>
-
-    </main>
-
-    <footer>
-        <div class="footer">
-
-            <div class="footer-one">
-                <h4>Gweru Chamber of Commerce</h4>
-                <p>Gweru</p>
-                <p>Midlands</p>
-                <p>Zimbabwe</p>
-            </div>
-
-            <div class="footer-two">
-                <img src="images/facebook.svg" alt="facebook logo">
-                <img src="images/youtube.svg" alt="youtube logo">
-                <img src="images/linkedin.svg" alt="linkedin logo">
-            </div>
-
-            <div class="footer-three">
-                <p>WDD231 Class Project</p>
-                <p>Lawson Mutsa</p>
-                <p>Gweru Chamber of Commerce</p>
-                <p id="lastModified"></p>
-            </div>
-
+<footer>
+    <div class="footer">
+        <div class="footer-one">
+            <h4>Gweru Chamber of Commerce</h4>
+            <p>Gweru, Midlands, Zimbabwe</p>
         </div>
 
-    </footer>
-    
+        <div class="footer-two">
+            <img src="images/facebook.svg" alt="Facebook" loading="lazy">
+            <img src="images/youtube.svg" alt="YouTube" loading="lazy">
+            <img src="images/linkedin.svg" alt="LinkedIn" loading="lazy">
+
+           
+        </div>
+
+        <div class="footer-three">
+            <p>WDD231 Class Project</p>
+            <p>Lawson Mutsa</p>
+            <p id="lastModified"></p>
+        </div>
+    </div>
+</footer>
 </body>
 </html>

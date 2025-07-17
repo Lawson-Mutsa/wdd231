@@ -5,3 +5,5 @@ hamButton.addEventListener("click", () => {
   navigation.classList.toggle("open");
   hamButton.classList.toggle("open");
 });
+document.getElementById("lastModified").textContent =
+  "Last Modified: " + document.lastModified;
