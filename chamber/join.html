@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Join | Gweru Chamber of Commerce </title>
+    <title>Join | Gweru Chamber of Commerce</title>
     <meta name="description" content="Gweru Chamber of Commerce where businesses and patriots get relevant information on events and businesses in Gweru.">
     <meta name="author" content="Lawson Mutsa">
     <meta property="og:title" content="Join Gweru Chamber of Commerce">
@@ -21,192 +21,192 @@
     <script src="scripts/main.js"></script>
 </head>
 <body>
-<header>
-    <div class="header">
-        <div class="site-logo">
-            <img src="images/town2.jpg" alt="Gweru City Town Building">
-            <span>Gweru Chamber of Commerce</span>
+    <header>
+        <div class="header">
+            <div class="site-logo">
+                <img src="images/town2.jpg" alt="Gweru City Town Building">
+                <span>Gweru Chamber of Commerce</span>
+            </div>
+            <button id="menu" aria-label="Menu"></button>
+            <nav>
+                <ul class="navigation">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="directory.html">DIRECTORY</a></li>
+                    <li><a href="#" class="active">JOIN</a></li>
+                    <li><a href="#">DISCOVER</a></li>
+                </ul>
+            </nav>
         </div>
-        <button id="menu" aria-label="Menu"></button>
-        <nav>
-            <ul class="navigation">
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="directory.html">DIRECTORY</a></li>
-                <li><a href="#"  class="active">JOIN</a></li>
-                <li><a href="#">DISCOVER</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
-<br>
+    </header>
+    <br>
 
-<main>
-    <div class="container">
-        <div class="form-container">
-            <form id="membershipForm" method="get" action="thankyou.html">
-                <label>
-                    First Name:
-                    <input type="text" name="firstName" required autocomplete="given-name" title="Please enter your first name">
-                </label>
+    <main>
+        <h1>Join</h1>
+        <div class="container">
+            <div class="form-container">
+                <form id="membershipForm" method="get" action="thankyou.html">
+                    <label>
+                        First Name:
+                        <input type="text" name="firstName" required autocomplete="given-name" title="Please enter your first name">
+                    </label>
+                    
+                    <label>
+                        Last Name:
+                        <input type="text" name="lastName" required autocomplete="family-name" title="Please enter your last name">
+                    </label>
+                    
+                    <label>
+                        Organizational Title:
+                        <input type="text" name="orgTitle" autocomplete="organization-title" 
+                               title="Please enter your organizational title (letters, hyphens, and spaces only, minimum 7 characters)"
+                               pattern="[a-zA-Z\- ]{7,}">
+                    </label>
+                    
+                    <label>
+                        Email:
+                        <input type="email" name="email" required autocomplete="email" 
+                               title="Please enter a valid email address"
+                               placeholder="example@domain.com">
+                    </label>
+                    
+                    <label>
+                        Mobile Phone:
+                        <input type="tel" name="phone" required autocomplete="tel" title="Please enter your mobile phone number">
+                    </label>
+                    
+                    <label>
+                        Organization Name:
+                        <input type="text" name="orgName" required autocomplete="organization" title="Please enter your organization name">
+                    </label>
+                    
+                    <label>
+                        Membership Level:
+                        <select name="membershipLevel" required title="Please select a membership level">
+                            <option value="">-- Select a Membership Level --</option>
+                            <option value="NP Membership">NP Membership (Non-profit, no fee)</option>
+                            <option value="Bronze Membership">Bronze Membership</option>
+                            <option value="Silver Membership">Silver Membership</option>
+                            <option value="Gold Membership">Gold Membership</option>
+                        </select>
+                    </label>
+                    
+                    <label>
+                        Organization Description:
+                        <textarea name="orgDescription" title="Please describe your business or organization"></textarea>
+                    </label>
+                    
+                    <input type="hidden" name="timestamp" id="timestamp">
+                    
+                    <button type="submit">Submit Application</button>
+                </form>
+            </div>
+            
+            <div class="cards-container">
+                <div class="card">
+                    <h3>NP Membership</h3>
+                    <p>For non-profit organizations with no membership fee.</p>
+                    <a href="#npmodal" class="modal-link">Learn More</a>
+                </div>
                 
-                <label>
-                    Last Name:
-                    <input type="text" name="lastName" required autocomplete="family-name" title="Please enter your last name">
-                </label>
+                <div class="card">
+                    <h3>Bronze Membership</h3>
+                    <p>Basic membership with essential benefits.</p>
+                    <a href="#bronzemodal" class="modal-link">Learn More</a>
+                </div>
                 
-                <label>
-                    Organizational Title:
-                    <input type="text" name="orgTitle" autocomplete="organization-title" 
-                           title="Please enter your organizational title (letters, hyphens, and spaces only, minimum 7 characters)"
-                           pattern="[a-zA-Z\- ]{7,}">
-                </label>
+                <div class="card">
+                    <h3>Silver Membership</h3>
+                    <p>Enhanced membership with additional benefits.</p>
+                    <a href="#silvermodal" class="modal-link">Learn More</a>
+                </div>
                 
-                <label>
-                    Email:
-                    <input type="email" name="email" required autocomplete="email" 
-                           title="Please enter a valid email address"
-                           placeholder="example@domain.com">
-                </label>
-                
-                <label>
-                    Mobile Phone:
-                    <input type="tel" name="phone" required autocomplete="tel" title="Please enter your mobile phone number">
-                </label>
-                
-                <label>
-                    Organization Name:
-                    <input type="text" name="orgName" required autocomplete="organization" title="Please enter your organization name">
-                </label>
-                
-                <label>
-                    Membership Level:
-                    <select name="membershipLevel" required title="Please select a membership level">
-                        <option value="">-- Select a Membership Level --</option>
-                        <option value="NP Membership">NP Membership (Non-profit, no fee)</option>
-                        <option value="Bronze Membership">Bronze Membership</option>
-                        <option value="Silver Membership">Silver Membership</option>
-                        <option value="Gold Membership">Gold Membership</option>
-                    </select>
-                </label>
-                
-                <label>
-                    Organization Description:
-                    <textarea name="orgDescription" title="Please describe your business or organization"></textarea>
-                </label>
-                
-                <input type="hidden" name="timestamp" id="timestamp">
-                
-                <button type="submit">Submit Application</button>
-            </form>
+                <div class="card">
+                    <h3>Gold Membership</h3>
+                    <p>Premium membership with all benefits.</p>
+                    <a href="#goldmodal" class="modal-link">Learn More</a>
+                </div>
+            </div>
         </div>
         
-        <div class="cards-container">
-            <div class="card">
-                <h3>NP Membership</h3>
-                <p>For non-profit organizations with no membership fee.</p>
-                <a href="#npModal" class="modal-link">Learn More</a>
-            </div>
-            
-            <div class="card">
-                <h3>Bronze Membership</h3>
-                <p>Basic membership with essential benefits.</p>
-                <a href="#bronzeModal" class="modal-link">Learn More</a>
-            </div>
-            
-            <div class="card">
-                <h3>Silver Membership</h3>
-                <p>Enhanced membership with additional benefits.</p>
-                <a href="#silverModal" class="modal-link">Learn More</a>
-            </div>
-            
-            <div class="card">
-                <h3>Gold Membership</h3>
-                <p>Premium membership with all benefits.</p>
-                <a href="#goldModal" class="modal-link">Learn More</a>
+        <!-- Modals -->
+        <div id="npmodal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>NP Membership Benefits</h2>
+                <ul>
+                    <li>No membership fee for qualified non-profit organizations</li>
+                    <li>Access to member directory</li>
+                    <li>Monthly newsletter</li>
+                    <li>Listing in our non-profit partners section</li>
+                </ul>
             </div>
         </div>
-    </div>
-    
-    <!-- Modals -->
-    <div id="npModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>NP Membership Benefits</h2>
-            <ul>
-                <li>No membership fee for qualified non-profit organizations</li>
-                <li>Access to member directory</li>
-                <li>Monthly newsletter</li>
-                <li>Listing in our non-profit partners section</li>
-            </ul>
+        
+        <div id="bronzemodal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Bronze Membership Benefits</h2>
+                <ul>
+                    <li>All NP Membership benefits</li>
+                    <li>5% discount on all events</li>
+                    <li>Access to basic training resources</li>
+                    <li>Quarterly networking events</li>
+                    <li>Annual fee: $250</li>
+                </ul>
+            </div>
         </div>
-    </div>
-    
-    <div id="bronzeModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Bronze Membership Benefits</h2>
-            <ul>
-                <li>All NP Membership benefits</li>
-                <li>5% discount on all events</li>
-                <li>Access to basic training resources</li>
-                <li>Quarterly networking events</li>
-                <li>Annual fee: $250</li>
-            </ul>
+        
+        <div id="silvermodal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Silver Membership Benefits</h2>
+                <ul>
+                    <li>All Bronze Membership benefits</li>
+                    <li>10% discount on all events</li>
+                    <li>Access to premium training resources</li>
+                    <li>Monthly networking events</li>
+                    <li>Featured listing in member directory</li>
+                    <li>Annual fee: $500</li>
+                </ul>
+            </div>
         </div>
-    </div>
-    
-    <div id="silverModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Silver Membership Benefits</h2>
-            <ul>
-                <li>All Bronze Membership benefits</li>
-                <li>10% discount on all events</li>
-                <li>Access to premium training resources</li>
-                <li>Monthly networking events</li>
-                <li>Featured listing in member directory</li>
-                <li>Annual fee: $500</li>
-            </ul>
+        
+        <div id="goldmodal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Gold Membership Benefits</h2>
+                <ul>
+                    <li>All Silver Membership benefits</li>
+                    <li>15% discount on all events</li>
+                    <li>Access to all training resources and workshops</li>
+                    <li>VIP networking events</li>
+                    <li>Homepage spotlight feature (quarterly)</li>
+                    <li>Priority event registration</li>
+                    <li>Annual fee: $1,000</li>
+                </ul>
+            </div>
         </div>
-    </div>
-    
-    <div id="goldModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Gold Membership Benefits</h2>
-            <ul>
-                <li>All Silver Membership benefits</li>
-                <li>15% discount on all events</li>
-                <li>Access to all training resources and workshops</li>
-                <li>VIP networking events</li>
-                <li>Homepage spotlight feature (quarterly)</li>
-                <li>Priority event registration</li>
-                <li>Annual fee: $1,000</li>
-            </ul>
-        </div>
-    </div>
+    </main>
 
-<footer>
-    <div class="footer">
-        <div class="footer-one">
-            <h4>Gweru Chamber of Commerce</h4>
-            <p>Gweru, Midlands, Zimbabwe</p>
-        </div>
+    <footer>
+        <div class="footer">
+            <div class="footer-one">
+                <h4>Gweru Chamber of Commerce</h4>
+                <p>Gweru, Midlands, Zimbabwe</p>
+            </div>
 
-        <div class="footer-two">
-            <img src="images/facebook.svg" alt="Facebook" loading="lazy">
-            <img src="images/youtube.svg" alt="YouTube" loading="lazy">
-            <img src="images/linkedin.svg" alt="LinkedIn" loading="lazy">
+            <div class="footer-two">
+                <img src="images/facebook.svg" alt="Facebook" loading="lazy">
+                <img src="images/youtube.svg" alt="YouTube" loading="lazy">
+                <img src="images/linkedin.svg" alt="LinkedIn" loading="lazy">
+            </div>
 
-           
+            <div class="footer-three">
+                <p>WDD231 Class Project</p>
+                <p>Lawson Mutsa</p>
+                <p id="lastModified"></p>
+            </div>
         </div>
-
-        <div class="footer-three">
-            <p>WDD231 Class Project</p>
-            <p>Lawson Mutsa</p>
-            <p id="lastModified"></p>
-        </div>
-    </div>
-</footer>
+    </footer>
 </body>
 </html>
