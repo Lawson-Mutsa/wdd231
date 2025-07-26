@@ -69,3 +69,64 @@ document.addEventListener("DOMContentLoaded", () => {
     
     fetchMembers();
 });
+document.addEventListener('DOMContentLoaded', function() {
+    // Set timestamp
+    document.getElementById('timestamp').value = new Date().toISOString();
+
+    // Modal functionality
+    document.querySelectorAll('.modal-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const modalId = this.getAttribute('href');
+            const modal = document.querySelector(modalId);
+            if (modal) {
+                modal.style.display = 'block';
+            } else {
+                console.error('Modal not found:', modalId);
+            }
+        });
+    });
+
+    // Close buttons
+    document.querySelectorAll('.close').forEach(button => {
+        button.addEventListener('click', function() {
+            this.closest('.modal').style.display = 'none';
+        });
+    });
+
+    // Close when clicking outside modal content
+    window.addEventListener('click', function(e) {
+        if (e.target.classList.contains('modal')) {
+            e.target.style.display = 'none';
+        }
+    });
+
+    // Close with Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            document.querySelectorAll('.modal').forEach(modal => {
+                modal.style.display = 'none';
+            });
+        }
+    });
+});
+document.addEventListener('DOMContentLoaded', function() {
+    // Parse URL parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    
+    // Display the submitted values
+    document.getElementById('displayFirstName').textContent = urlParams.get('firstName') || 'Not provided';
+    document.getElementById('displayLastName').textContent = urlParams.get('lastName') || 'Not provided';
+    document.getElementById('displayEmail').textContent = urlParams.get('email') || 'Not provided';
+    document.getElementById('displayPhone').textContent = urlParams.get('phone') || 'Not provided';
+    document.getElementById('displayOrgName').textContent = urlParams.get('orgName') || 'Not provided';
+    
+    // Format the timestamp
+    const timestamp = urlParams.get('timestamp');
+    if (timestamp) {
+        const date = new Date(timestamp);
+        document.getElementById('displayTimestamp').textContent = date.toLocaleString();
+    } else {
+        document.getElementById('displayTimestamp').textContent = 'Not available';
+    }
+});

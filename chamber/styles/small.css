@@ -256,3 +256,318 @@ h1 {
 .member-info p {
   margin: 3px 0;
 }
+
+
+/* ===== FORM CONTAINER ===== */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.form-container {
+    flex: 1;
+    min-width: 0; /* Allows flex item to shrink below content size */
+}
+
+form {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* ===== FORM ELEMENTS ===== */
+label {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 15px;
+    color: #495057;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-size: 15px;
+    transition: border-color 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #00487C;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}
+
+button[type="submit"] {
+    background-color: #00487C;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: white;
+    color: #00487C;
+}
+
+/* ===== MEMBERSHIP CARDS ===== */
+.cards-container {
+    flex: 1;
+    min-width: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.5s forwards;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Staggered card animations */
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.3s; }
+.card:nth-child(3) { animation-delay: 0.5s; }
+.card:nth-child(4) { animation-delay: 0.7s; }
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #212529;
+    font-size: 18px;
+}
+
+.card p {
+    color: #6c757d;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.card a {
+    color: #00487C;
+    text-decoration: none;
+    margin-top: auto;
+    padding-top: 10px;
+    display: inline-block;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+/* ===== MODALS ===== */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+    backdrop-filter: blur(3px);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 25px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #333;
+}
+
+.modal h2 {
+    margin-top: 0;
+    color: #212529;
+}
+
+.modal ul {
+    padding-left: 20px;
+}
+
+.modal li {
+    margin-bottom: 8px;
+    color: #495057;
+}
+
+/* ===== RESPONSIVE BREAKPOINTS ===== */
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .cards-container {
+        grid-template-columns: 1fr 1fr;
+        margin-top: 30px;
+    }
+    
+    .modal-content {
+        margin: 20% auto;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 15px;
+    }
+    
+    form {
+        padding: 20px;
+    }
+    
+    .cards-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .modal-content {
+        width: 95%;
+        padding: 20px 15px;
+    }
+}
+
+@media (max-width: 400px) {
+    input, select, textarea {
+        padding: 10px;
+    }
+    
+    button[type="submit"] {
+        padding: 12px;
+    }
+    
+    .card {
+        padding: 15px;
+    }
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ===== THANK YOU CONTAINER ===== */
+.thank-you-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.thank-you-container h1 {
+    color: #00487C;
+    margin-top: 0;
+}
+
+.thank-you-message {
+    font-size: 16px;
+    margin-bottom: 30px;
+    color: #495057;
+}
+
+/* ===== CONFIRMATION DETAILS ===== */
+.confirmation-details {
+    margin-top: 30px;
+    border-top: 1px solid #e9ecef;
+    padding-top: 20px;
+}
+
+.detail-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f1f3f5;
+}
+
+.detail-label {
+    font-weight: bold;
+    width: 150px;
+    color: #495057;
+    font-size: 15px;
+}
+
+.detail-value {
+    flex: 1;
+    min-width: 200px;
+    color: #212529;
+    font-size: 15px;
+}
+
+/* ===== RESPONSIVE BREAKPOINTS ===== */
+@media (max-width: 600px) {
+    body {
+        padding: 15px;
+    }
+    
+    .thank-you-container {
+        padding: 20px;
+    }
+    
+    .detail-label {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    
+    .detail-value {
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    .thank-you-container {
+        padding: 15px;
+    }
+    
+    .thank-you-message {
+        font-size: 15px;
+    }
+}

@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gweru Chamber of Commerce | Home</title>
+    <title>Gweru Chamber of Commerce | Directory</title>
     <meta name="description" content="Gweru Chamber of Commerce where businesses and patriots get relevant information on events and businesses in Gweru.">
     <meta name="author" content="Lawson Mutsa">
     <meta property="og:title" content="Chamber of Commerce">
     <meta property="og:description" content="Gweru Chamber of Commerce where businesses and patriots get relevant information on events and businesses in Gweru.">
     <meta property="og:url" content="https://lawson-mutsa.github.io/wdd231/chamber/directory.html">
-    <meta property="og:image" content="town_council.svg">
+    <meta property="og:image" content="https://lawson-mutsa.github.io/wdd231/chamber/images/town_council.svg">
     <link rel="icon" href="images/city_centre.webp">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
@@ -17,9 +17,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
-    <script src="scripts/weather.js" defer></script>
-    <script src="scripts/spotlight.js" defer></script>
     <script src="scripts/menu.js" defer></script>
+    <script src="scripts/main.js"></script>
 </head>
 <body>
 <header>
@@ -31,49 +30,58 @@
         <button id="menu" aria-label="Menu"></button>
         <nav>
             <ul class="navigation">
-                <li><a href="#" class="active">HOME</a></li>
-                <li><a href="directory.html">DIRECTORY</a></li>
-                <li><a href="join.html">JOIN</a></li>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="directory.html" >DIRECTORY</a></li>
+                <li><a href="join.html" class="active">JOIN</a></li>
                 <li><a href="#">DISCOVER</a></li>
             </ul>
         </nav>
     </div>
 </header>
+<br>
 
 <main>
-    <section class="hero">
-        <img src="images/town2.jpg" alt="Antelope Park" class="hero-img">
-        <div class="hero-text">
-            <span>The place where people come to know businesses in Gweru.</span>
-        </div>
-        <a href="#">Add Your Business</a>
-    </section>
 
-    <h1>Home</h1>
-
-    <div class="events">
-        <h3>Events</h3>
-        <p>No events scheduled</p>
-    </div>
-
-    <div class="weather">
-        <div class="current">
-            <h3 id="location">Current Weather</h3>
-            <div class="weather-grid">
-                <img id="icon" alt="Weather Icon">
-                <p class="temp" id="temp"></p>
-                <p class="desc" id="description"></p>
-                <p>Humidity: <span id="humidity"></span>%</p>
+    <div class="container">
+        <div class="thank-you-container">
+            <h1>Thank You!</h1>
+            <p class="thank-you-message">We appreciate you taking the time to complete our membership application form. Here's a summary of the information you provided:</p>
+            
+            <div class="confirmation-details">
+                <div class="detail-row">
+                    <div class="detail-label">First Name:</div>
+                    <div class="detail-value" id="displayFirstName"></div>
+                </div>
+                
+                <div class="detail-row">
+                    <div class="detail-label">Last Name:</div>
+                    <div class="detail-value" id="displayLastName"></div>
+                </div>
+                
+                <div class="detail-row">
+                    <div class="detail-label">Email:</div>
+                    <div class="detail-value" id="displayEmail"></div>
+                </div>
+                
+                <div class="detail-row">
+                    <div class="detail-label">Mobile Phone:</div>
+                    <div class="detail-value" id="displayPhone"></div>
+                </div>
+                
+                <div class="detail-row">
+                    <div class="detail-label">Organization Name:</div>
+                    <div class="detail-value" id="displayOrgName"></div>
+                </div>
+                
+                <div class="detail-row">
+                    <div class="detail-label">Application Submitted:</div>
+                    <div class="detail-value" id="displayTimestamp"></div>
+                </div>
             </div>
-        </div>
-        <div class="forecast">
-            <h3>Weather Forecast</h3>
-            <div id="forecast-container" class="forecast-grid"></div>
+            
+            <p>We'll review your application and contact you shortly. If you have any questions, please don't hesitate to reach out to us.</p>
         </div>
     </div>
-
-    <div class="spotlights"></div>
-</main>
 
 <footer>
     <div class="footer">
