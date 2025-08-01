@@ -3,23 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gweru Chamber of Commerce | Home</title>
-    <meta name="description" content="Gweru Chamber of Commerce where businesses and patriots get relevant information on events and businesses in Gweru.">
+    <title>Gweru Chamber of Commerce | Discover</title>
+    <meta name="description" content="Discover interesting places in Gweru with the Chamber of Commerce">
     <meta name="author" content="Lawson Mutsa">
-    <meta property="og:title" content="Chamber of Commerce">
-    <meta property="og:description" content="Gweru Chamber of Commerce where businesses and patriots get relevant information on events and businesses in Gweru.">
-    <meta property="og:url" content="https://lawson-mutsa.github.io/wdd231/chamber/directory.html">
-    <meta property="og:image" content="town_council.svg">
+    <meta property="og:title" content="Discover Gweru">
+    <meta property="og:description" content="Explore interesting places in Gweru">
+    <meta property="og:url" content="https://lawson-mutsa.github.io/wdd231/chamber/discover.html">
+    <meta property="og:image" content="https://lawson-mutsa.github.io/wdd231/chamber/images/town_council.svg">
     <link rel="icon" href="images/city_centre.webp">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/medium.css">
     <link rel="stylesheet" href="styles/large.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
-    <script src="scripts/weather.js" defer></script>
-    <script src="scripts/spotlight.js" defer></script>
     <script src="scripts/menu.js" defer></script>
+     <script src="scripts/main.js" defer></script>
+    <script src="scripts/discover.js" defer></script>
 </head>
 <body>
 <header>
@@ -31,48 +32,35 @@
         <button id="menu" aria-label="Menu"></button>
         <nav>
             <ul class="navigation">
-                <li><a href="#" class="active">HOME</a></li>
+                <li><a href="index.html">HOME</a></li>
                 <li><a href="directory.html">DIRECTORY</a></li>
                 <li><a href="join.html">JOIN</a></li>
-                <li><a href="discover.html">DISCOVER</a></li>
+                <li><a href="discover.html" class="active">DISCOVER</a></li>
             </ul>
         </nav>
     </div>
 </header>
 
-<main>
-    <section class="hero">
-        <img src="images/town2.jpg" alt="Antelope Park" class="hero-img">
-        <div class="hero-text">
-            <span>The place where people come to know businesses in Gweru.</span>
+<main class="discover-main">
+    <h1>Discover Gweru</h1>
+    
+    <div class="sidebar">
+        <div class="visitor-info">
+            <h2>Visitor Information</h2>
+            <div id="visit-message"></div>
         </div>
-        <a href="#">Add Your Business</a>
-    </section>
-
-    <h1>Home</h1>
-
-    <div class="events">
-        <h3>Events</h3>
-        <p>No events scheduled</p>
-    </div>
-
-    <div class="weather">
-        <div class="current">
-            <h3 id="location">Current Weather</h3>
-            <div class="weather-grid">
-                <img id="icon" alt="Weather Icon">
-                <p class="temp" id="temp"></p>
-                <p class="desc" id="description"></p>
-                <p>Humidity: <span id="humidity"></span>%</p>
-            </div>
-        </div>
-        <div class="forecast">
-            <h3>Weather Forecast</h3>
-            <div id="forecast-container" class="forecast-grid"></div>
+        <div class="demographics">
+            <h2>Gweru at a Glance</h2>
+            <p>Population: Approximately 150,000</p>
+            <p>Founded: 1894</p>
+            <p>Elevation: 1,424m (4,672ft)</p>
+            <p>Known as: The City of Progress</p>
         </div>
     </div>
-
-    <div class="spotlights"></div>
+    
+    <div class="discover-gallery">
+        <!-- Cards will be dynamically inserted here by JavaScript -->
+    </div>
 </main>
 
 <footer>
@@ -86,8 +74,6 @@
             <img src="images/facebook.svg" alt="Facebook" loading="lazy">
             <img src="images/youtube.svg" alt="YouTube" loading="lazy">
             <img src="images/linkedin.svg" alt="LinkedIn" loading="lazy">
-
-           
         </div>
 
         <div class="footer-three">

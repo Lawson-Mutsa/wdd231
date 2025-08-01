@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Gweru City Centre",
+        "address": "Central Business District, Gweru",
+        "description": "The bustling heart of Gweru with shops, markets, and government buildings.",
+        "image": "gweru_city_centre.webp"
+    },
+    {
+        "name": "Antelope Park",
+        "address": "Riverside Drive, Gweru",
+        "description": "Famous wildlife park offering lion encounters and game viewing.",
+        "image": "antelope_park.webp"
+    },
+    {
+        "name": "Mkoba Stadium",
+        "address": "Mkoba Township, Gweru",
+        "description": "Main sports venue in Gweru hosting football matches and events.",
+        "image": "mkoba_stadium.webp"
+    },
+    {
+        "name": "Gweru Memorial Library",
+        "address": "Robert Mugabe Way, Gweru",
+        "description": "Historic library with extensive collections and reading spaces.",
+        "image": "library.webp"
+    },
+    {
+        "name": "Gweru Theatre",
+        "address": "5th Street, Gweru",
+        "description": "Cultural hub for performances, plays, and community events.",
+        "image": "theatre.webp"
+    },
+    {
+        "name": "Boggie Clock Tower",
+        "address": "Main Street, Gweru",
+        "description": "Iconic landmark and meeting point in the city center.",
+        "image": "clock_tower.webp"
+    },
+    {
+        "name": "Nalatale Ruins",
+        "address": "30km South of Gweru",
+        "description": "Ancient stone ruins dating back to the 15th century.",
+        "image": "nalatale.webp"
+    },
+    {
+        "name": "Gweru Sports Club",
+        "address": "Airport Road, Gweru",
+        "description": "Premier sports and social club with golf, tennis, and more.",
+        "image": "sports_club.webp"
+    }
+]

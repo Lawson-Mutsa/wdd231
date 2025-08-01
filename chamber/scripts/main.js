@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
         lastModifiedParagraph.textContent = "Last Modified: " + document.lastModified;
     }
 
-    
     async function fetchMembers() {
         try {
             const response = await fetch("data/members.json");
@@ -51,7 +50,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-
     if (gridBtn) {
         gridBtn.addEventListener("click", () => {
             directory.classList.add("grid-view");
@@ -66,12 +64,15 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    
     fetchMembers();
 });
+
 document.addEventListener('DOMContentLoaded', function() {
     // Set timestamp
-    document.getElementById('timestamp').value = new Date().toISOString();
+    const timestampField = document.getElementById('timestamp');
+    if (timestampField) {
+        timestampField.value = new Date().toISOString();
+    }
 
     // Modal functionality
     document.querySelectorAll('.modal-link').forEach(link => {
@@ -110,23 +111,27 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
 document.addEventListener('DOMContentLoaded', function() {
-    // Parse URL parameters
-    const urlParams = new URLSearchParams(window.location.search);
-    
-    // Display the submitted values
-    document.getElementById('displayFirstName').textContent = urlParams.get('firstName') || 'Not provided';
-    document.getElementById('displayLastName').textContent = urlParams.get('lastName') || 'Not provided';
-    document.getElementById('displayEmail').textContent = urlParams.get('email') || 'Not provided';
-    document.getElementById('displayPhone').textContent = urlParams.get('phone') || 'Not provided';
-    document.getElementById('displayOrgName').textContent = urlParams.get('orgName') || 'Not provided';
-    
-    // Format the timestamp
-    const timestamp = urlParams.get('timestamp');
-    if (timestamp) {
-        const date = new Date(timestamp);
-        document.getElementById('displayTimestamp').textContent = date.toLocaleString();
-    } else {
-        document.getElementById('displayTimestamp').textContent = 'Not available';
+    // Only run on thank-you page
+    if (document.getElementById('displayFirstName')) {
+        // Parse URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        
+        // Display the submitted values
+        document.getElementById('displayFirstName').textContent = urlParams.get('firstName') || 'Not provided';
+        document.getElementById('displayLastName').textContent = urlParams.get('lastName') || 'Not provided';
+        document.getElementById('displayEmail').textContent = urlParams.get('email') || 'Not provided';
+        document.getElementById('displayPhone').textContent = urlParams.get('phone') || 'Not provided';
+        document.getElementById('displayOrgName').textContent = urlParams.get('orgName') || 'Not provided';
+        
+        // Format the timestamp
+        const timestamp = urlParams.get('timestamp');
+        if (timestamp) {
+            const date = new Date(timestamp);
+            document.getElementById('displayTimestamp').textContent = date.toLocaleString();
+        } else {
+            document.getElementById('displayTimestamp').textContent = 'Not available';
+        }
     }
 });
