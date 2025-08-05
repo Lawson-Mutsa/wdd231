@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ISS Tracker Project Description</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0; padding: 20px;
+      background-color: #f0f4f8;
+      color: #333;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.6;
+    }
+    h1, h2, h3 {
+      color: #00509e;
+    }
+    header {
+      text-align: center;
+      padding-bottom: 20px;
+      border-bottom: 2px solid #00509e;
+      margin-bottom: 30px;
+    }
+    section {
+      margin-bottom: 40px;
+      background: white;
+      padding: 20px 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    ul {
+      margin-top: 10px;
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+    code {
+      background: #eee;
+      padding: 2px 5px;
+      border-radius: 3px;
+      font-family: monospace;
+    }
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 0.9em;
+      color: #777;
+    }
+    .wireframe-image {
+      background-color: #dbe9f4;
+      border: 2px dashed #00509e;
+      height: 250px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #00509e;
+      font-weight: bold;
+      font-size: 1.2em;
+      border-radius: 6px;
+      margin-top: 10px;
+    }
+    img.wireframe {
+      width: 100%;
+      height: auto;
+      border: 2px dashed #00509e;
+      border-radius: 6px;
+      background-color: #dbe9f4;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>International Space Station Real-Time Tracker</h1>
+    <p>A project demonstrating live API data usage, local storage, and dynamic web content</p>
+  </header>
+
+  <section id="project-subject">
+    <h2>1. Project Subject</h2>
+    <p>International Space Station Real Time Tracker</p>
+  </section>
+
+  <section id="project-description">
+    <h2>2. Project Description</h2>
+    <p>This website will track the real-time location of the International Space Station (ISS) using the <a href="http://open-notify.org/Open-Notify-API/ISS-Location-Now/" target="_blank" rel="noopener">Open Notify ISS Location API</a>.</p>
+    <p>The home page will display the ISS’s current coordinates and a map showing its position over the Earth.</p>
+    <p>A history page will dynamically list the last 15 recorded positions, including latitude, longitude, and timestamps, stored in local storage.</p>
+    <p>A modal will allow users to view additional details, such as the ISS’s speed and trajectory information.</p>
+    <p>The site will consist of three pages:</p>
+    <ul>
+      <li><strong>Mission Control (<code>index.html</code>)</strong> – Displays the live ISS location, current coordinates, and a map view.</li>
+      <li><strong>Flight Log (<code>flightlog.html</code>)</strong> – A dynamic list of the last 15 recorded ISS positions (latitude, longitude, and timestamp), stored in local storage.</li>
+      <li><strong>About the Crew (<code>about.html</code>)</strong> – Provides information about the ISS, its mission, and the astronauts currently aboard.</li>
+    </ul>
+  </section>
+
+  <section id="project-purpose">
+    <h2>3. Project Purpose</h2>
+    <p>This project demonstrates the use of live data APIs, asynchronous JavaScript, and dynamic content generation to create a functional, real-world-inspired satellite tracker.</p>
+    <p>The purpose of this project is to build proficiency in handling API data, implementing local storage, and designing a responsive, interactive web tool that educates users about the ISS.</p>
+  </section>
+
+  <section id="user-scenarios">
+    <h2>4. User Scenarios</h2>
+    <p>The following scenarios reflect potential users of the ISS Tracker website:</p>
+    <ul>
+      <li><strong>Scenario 1:</strong> A science teacher wants to show students where the ISS currently is in real-time and explain its mission using live data and maps.</li>
+      <li><strong>Scenario 2:</strong> A space enthusiast regularly checks the flight log to review the ISS’s previous orbits and track its speed and trajectory details.</li>
+      <li><strong>Scenario 3:</strong> A casual visitor wants to learn more about the astronauts aboard the ISS and the goals of their mission through the About page.</li>
+    </ul>
+  </section>
+
+  <section id="color-schema">
+    <h2>5. Color Schema</h2>
+    <p>This project uses the following primary colors:</p>
+    <ul>
+      <li><code>#00509e</code> — A deep blue used for headings, links, borders, and important highlights to represent the vastness of space.</li>
+      <li><code>#f0f4f8</code> — A light blue-gray used as the page background for a clean, subtle sky/space feel.</li>
+      <li><code>#333333</code> — Dark gray used for the main body text to ensure readability and contrast.</li>
+      <li><code>#eeeeee</code> — Light gray background for inline code blocks and subtle UI elements.</li>
+    </ul>
+  </section>
+
+  <section id="typography">
+    <h2>6. Typography</h2>
+    <p>The primary font used throughout the website is <strong>Segoe UI</strong>, a modern, clean sans-serif font known for readability on screens.</p>
+    <ul>
+      <li><strong>Body Text:</strong> Uses <code>Segoe UI</code>, fallback fonts include Tahoma, Geneva, Verdana, and sans-serif.</li>
+      <li><strong>Headings (h1, h2, h3):</strong> Use the same font family, styled with a bold weight and colored deep blue <code>#00509e</code> for emphasis.</li>
+      <li><strong>Code Blocks:</strong> Use monospace font for clarity, with a subtle background color <code>#eeeeee</code>.</li>
+    </ul>
+  </section>
+
+
+  <footer>
+    <p>© 2025 ISS Tracker Project | Created by Lawson</p>
+  </footer>
+
+</body>
+</html>
