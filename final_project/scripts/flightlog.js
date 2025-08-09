@@ -1,25 +1,25 @@
-// Flight Log page functionality
 document.addEventListener('DOMContentLoaded', () => {
-    // Load and display flight log
     displayFlightLog();
-    
-    // Clear log button
-    document.getElementById('clearLogBtn').addEventListener('click', clearFlightLog);
+
+    document.getElementById('clearLogBtn').addEventListener('click', () => {
+        if (confirm('Are you sure you want to clear the flight log?')) {
+            localStorage.removeItem('issPositions');
+            displayFlightLog();
+        }
+    });
 });
 
 function displayFlightLog() {
     const flightLogBody = document.getElementById('flightLogBody');
-    const history = JSON.parse(localStorage.getItem('issPositions') || '[]'); // Fixed missing parenthesis
-    
+    const history = JSON.parse(localStorage.getItem('issPositions') || '[]');
+
     flightLogBody.innerHTML = '';
-    
+
     if (history.length === 0) {
-        const row = document.createElement('tr');
-        row.innerHTML = '<td colspan="3" style="text-align: center;">No flight data available</td>';
-        flightLogBody.appendChild(row);
+        flightLogBody.innerHTML = '<tr><td colspan="3" style="text-align: center;">No flight data available</td></tr>';
         return;
     }
-    
+
     history.forEach(position => {
         const row = document.createElement('tr');
         row.innerHTML = `
@@ -29,11 +29,4 @@ function displayFlightLog() {
         `;
         flightLogBody.appendChild(row);
     });
-}
-
-function clearFlightLog() {
-    if (confirm('Are you sure you want to clear the flight log?')) {
-        localStorage.removeItem('issPositions');
-        displayFlightLog();
-    }
 }

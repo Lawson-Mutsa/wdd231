@@ -1,8 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Set current year
-    document.getElementById('currentYear').textContent = new Date().getFullYear();
-
-    // Load crew data (using mock data since Open Notify has CORS issues)
     loadCrew();
 
     // Form handling
