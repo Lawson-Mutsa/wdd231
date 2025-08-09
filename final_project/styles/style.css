@@ -16,7 +16,7 @@
 
 /* Base Layout */
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+   font-family: "Google Sans Code", monospace;
   background-color: var(--light-bg);
   color: var(--dark-text);
   line-height: 1.6;
