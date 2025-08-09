@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Flight log of International Space Station positions">
+    <meta name="author" content="Lawson Mutsa">
+    <meta property="og:title" content="ISS Tracker | Flight Log">
+    <meta property="og:description" content="History of ISS positions">
+    <meta property="og:url" content="https://yourwebsite.com/iss-tracker/flightlog.html">
+    <title>ISS Tracker | Flight Log</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap" rel="stylesheet">
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/flightlog.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <a id="menu" href="#"></a>
+        <nav>   
+            <ul class="navigation">
+                <li><a href="index.html">Mission Control</a></li>
+                <li><a href="about.html">About the Crew</a></li>
+                <li><a href="flightlog.html">Flight Log</a></li>  
+                <li><a href="notify.html">Get Alerts</a></li>      
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>ISS Flight Log</h1>
+        
+        <div class="card">
+            <h2>Recent Positions</h2>
+            <p>This table shows the last 15 recorded positions of the International Space Station.</p>
+            
+            <table class="flight-table">
+                <thead>
+                    <tr>
+                        <th>Timestamp</th>
+                        <th>Latitude</th>
+                        <th>Longitude</th>
+                    </tr>
+                </thead>
+                <tbody id="flightLogBody">
+                    <!-- Flight log entries will be inserted here by JavaScript -->
+                </tbody>
+            </table>
+            
+            <button id="clearLogBtn" class="btn">Clear Flight Log</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> ISS Tracker Project | Created by Lawson</p>
+    </footer>
+</body>
+</html>

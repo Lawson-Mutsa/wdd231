@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Real-time tracking of the International Space Station">
+    <meta name="author" content="Lawson Mutsa">
+    <meta property="og:title" content="ISS Tracker | Mission Control">
+    <meta property="og:description" content="Track the International Space Station in real-time">
+    <meta property="og:url" content="https://yourwebsite.com/iss-tracker">
+    <title>ISS Tracker | Mission Control</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/mission.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <a id="menu" href="#"></a>
+        <nav>   
+            <ul class="navigation">
+                <li><a href="index.html">Mission Control</a></li>
+                <li><a href="about.html">About the Crew</a></li>
+                <li><a href="flightlog.html">Flight Log</a></li> 
+                <li><a href="notify.html">Get Alerts</a></li>       
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>ISS Mission Control</h1>
+        
+        <div class="card">
+            <h2>Current Position</h2>
+            <div id="issPosition">
+                <p>Latitude: <span id="latitude">Loading...</span></p>
+                <p>Longitude: <span id="longitude">Loading...</span></p>
+                <p>Timestamp: <span id="timestamp">Loading...</span></p>
+                <button id="detailsBtn" class="btn">View Details</button>
+            </div>
+            
+            <div id="mapContainer" class="map-container"></div>
+        </div>
+        
+        <div class="card">
+            <h2>About the ISS</h2>
+            <p>The International Space Station (ISS) is a modular space station in low Earth orbit. It is a multinational collaborative project involving five participating space agencies: NASA (United States), Roscosmos (Russia), JAXA (Japan), ESA (Europe), and CSA (Canada).</p>
+            <p>The ISS serves as a microgravity and space environment research laboratory in which scientific research is conducted in astrobiology, astronomy, meteorology, physics, and other fields.</p>
+            <a href="about.html" class="btn">Learn More About the Crew</a>
+        </div>
+    </main>
+
+    <!-- ISS Details Modal -->
+    <div id="issDetailsModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>ISS Detailed Information</h2>
+            <div id="issDetails">
+                <p>Speed: <span id="issSpeed">Calculating...</span> km/h</p>
+                <p>Altitude: <span id="issAltitude">Calculating...</span> km</p>
+                <p>Orbital Period: ~90 minutes</p>
+                <p>Current Visibility: <span id="visibility">Calculating...</span></p>
+                <p>Next Sunrise: <span id="sunrise">Calculating...</span></p>
+                <p>Next Sunset: <span id="sunset">Calculating...</span></p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> ISS Tracker Project | Created by Lawson</p>
+    </footer>
+</body>
+</html>
