@@ -3,25 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Information about the ISS and its crew">
-    <meta name="author" content="Lawson Mutsa">
-    <meta property="og:title" content="ISS Tracker | About the Crew">
-    <meta property="og:description" content="Information about the ISS and its crew">
-    <meta property="og:url" content="https://yourwebsite.com/iss-tracker/about.html">
-    <title>ISS Tracker | About the Crew</title>
+    <meta name="description" content="Information about the International Space Station and its crew">
+    <meta name="author" content="Your Name">
+    <meta property="og:title" content="ISS Tracker | About">
+    <meta property="og:description" content="Learn about the ISS and its astronauts">
+    <meta property="og:url" content="https://lawson-mutsa.github.io/wdd231/final_project/">
+     <meta property="og:image" content="https://lawson-mutsa.github.io/wdd231/final_project/images/iss.jpg">
+    <meta property="og:image" content="images/iss-logo.png">
+    <title>ISS Tracker | About</title>
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="icon" href="favicon.ico">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap" rel="stylesheet">
-    <script src="scripts/main.js" defer></script>
-    <script src="scripts/about.js" defer></script>
-    <script src="scripts/flightlog.js" defer></script>
-    <script src="scripts/mission.js" defer></script>
-    <script src="scripts/notify-confirm.js" defer></script>
-    <script src="scripts/notify.js" defer></script>
+    <link rel="icon" href="images/iss.ico">
 </head>
-
 <body>
     <header>
         <a id="menu" href="#"></a>
@@ -30,42 +22,57 @@
                 <li><a href="index.html">Mission Control</a></li>
                 <li><a href="about.html">About the Crew</a></li>
                 <li><a href="flightlog.html">Flight Log</a></li>
-                <li><a href="notify.html">Get Alerts</a></li>        
+              
             </ul>
         </nav>
     </header>
 
     <main>
-        <h1>About the ISS and Its Crew</h1>
+        <h1>About the ISS</h1>
         
         <div class="card">
             <h2>The International Space Station</h2>
-            <p>The International Space Station (ISS) is the largest modular space station currently in low Earth orbit. It is a multinational collaborative project between five participating space agencies: NASA (United States), Roscosmos (Russia), JAXA (Japan), ESA (Europe), and CSA (Canada).</p>
-            
-            <h3>Key Facts</h3>
-            <ul>
-                <li><strong>Launch:</strong> First module launched in 1998</li>
-                <li><strong>Orbit:</strong> Approximately 400 km above Earth</li>
-                <li><strong>Speed:</strong> ~28,000 km/h (completes an orbit every 90 minutes)</li>
-                <li><strong>Size:</strong> 109m x 73m (larger than a football field)</li>
-                <li><strong>Mass:</strong> ~420,000 kg</li>
-                <li><strong>Permanent Crew:</strong> Typically 6 astronauts/cosmonauts</li>
-            </ul>
-            
-            <h3>Mission Objectives</h3>
-            <p>The ISS serves as a microgravity and space environment research laboratory where scientific research is conducted in astrobiology, astronomy, meteorology, physics, and other fields. The station is suited for testing spacecraft systems and equipment required for possible future long-duration missions to the Moon and Mars.</p>
+            <p>The ISS is a modular space station in low Earth orbit. It's a multinational collaborative project involving NASA, Roscosmos, JAXA, ESA, and CSA.</p>
+            <p><strong>Orbit Height:</strong> 400 km | <strong>Speed:</strong> 28,000 km/h</p>
         </div>
-        
+
         <div class="card">
             <h2>Current Crew Members</h2>
             <div class="crew-grid" id="crewMembers">
-                <!-- Crew members will be loaded by JavaScript -->
+                <!-- Crew loaded by JavaScript -->
             </div>
+        </div>
+
+        <div class="card">
+            <h2>Get ISS Visibility Alerts</h2>
+            <form id="notifyForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="city">Nearest City:</label>
+                <input type="text" id="city" name="city" required>
+                
+                <button type="submit" class="btn">Notify Me</button>
+            </form>
         </div>
     </main>
 
+    <!-- Confirmation Modal -->
+    <div id="confirmationModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="confirmationDetails"></div>
+        </div>
+    </div>
+
     <footer>
-        <p>&copy; <span id="currentYear"></span> ISS Tracker Project | Created by Lawson</p>
+         <p>&copy; <span id="currentYear"></span> ISS Tracker Project | Created by Lawson</p>
     </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/about.js"></script>
 </body>
 </html>
