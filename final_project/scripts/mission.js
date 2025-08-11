@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
         iconAnchor: [25, 25]
     });
 
+    /*Fething Data From an API*/ 
+    
     const marker = L.marker([0, 0], { icon: issIcon }).addTo(map);
 
     fetchISSLocation();

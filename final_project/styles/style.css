@@ -208,6 +208,9 @@ a:hover {
   border-radius: 8px;
   overflow: hidden;
 }
+a {
+  color: white;
+}
 
 /* Modal */
 .modal {

@@ -132,11 +132,18 @@ function loadCrew() {
         }
 
         grid.innerHTML = crew.map(member => `
-            <div class="crew-card">
-                <img src="${member.image}" alt="Portrait of ${member.name}" loading="lazy">
-                <h3>${member.name}</h3>
-                <p>${member.role}</p>
-            </div>
+            <div class="crew-card" style="aspect-ratio: 1/1.2">
+      <img 
+        src="${member.image}" 
+        alt="${member.name}"
+        width="300" 
+        height="240"
+        loading="lazy"
+        decoding="async"
+      >
+      <h3>${member.name}</h3>
+      <p>${member.role}</p>
+    </div>
         `).join('');
 
     } catch (error) {
