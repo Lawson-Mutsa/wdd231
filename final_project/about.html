@@ -12,10 +12,13 @@
     <meta property="og:image" content="images/iss-logo.png">
     <title>ISS Tracker | About</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="icon" href="images/iss.ico">
+     <script src="scripts/main.js" defer></script>
+    <script src="scripts/about.js" defer></script>
+
 </head>
 <body>
     <header>
@@ -63,19 +66,19 @@
         </div>
     </main>
 
-    <!-- Confirmation Modal -->
-    <div id="confirmationModal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <div id="confirmationDetails"></div>
-        </div>
-    </div>
 
+<!-- Confirmation Modal -->
+<div id="confirmationModal" class="modal">
+  <div class="modal-content">
+    <span class="close-modal">&times;</span>
+    <div id="confirmationDetails"></div>
+  </div>
+</div>
+   
     <footer>
          <p>&copy; <span id="currentYear"></span> ISS Tracker Project | Created by Lawson</p>
     </footer>
 
-    <script src="scripts/main.js"></script>
-    <script src="scripts/about.js"></script>
+   
 </body>
 </html>
